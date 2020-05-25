@@ -46,7 +46,7 @@ public class ProducerControllerIntegrationTest {
         mockMvc.perform( MockMvcRequestBuilders.get("/producer/prizes-interval").contentType(MediaType.APPLICATION_JSON))
             .andExpect(MockMvcResultMatchers.status().isOk())
             .andExpect( jsonPath("$.min.*.producer", hasItem( is( "Joel Silver" ))))
-            .andExpect( jsonPath("$.max.*.producer", hasItem( is( "Buzz Feitshans" ))));
+            .andExpect( jsonPath("$.max.*.producer", hasItem( is( "Matthew Vaughn" ))));
     }
     
 }

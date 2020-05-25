@@ -48,7 +48,7 @@ public class Application {
             ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
             InputStream inputStream = classLoader.getResourceAsStream("movielist.csv");
             Reader reader = new InputStreamReader(inputStream);
-            Iterable<CSVRecord> records = CSVFormat.RFC4180.withDelimiter(',')
+            Iterable<CSVRecord> records = CSVFormat.RFC4180.withDelimiter(';')
                     .withHeader("year", "title", "studios", "producers", "winner").parse(reader);
 
             for (CSVRecord record : records) {

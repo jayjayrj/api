@@ -62,9 +62,10 @@ public class ProducerService {
 
         for (int i = 0; i < pMovieProducerList.size() - 1; i++) {
 
+            MovieProducer movieProducerI = pMovieProducerList.get(i);
+
             for (int j = i + 1; j < pMovieProducerList.size(); j++) {
 
-                MovieProducer movieProducerI = pMovieProducerList.get(i);
                 MovieProducer movieProducerJ = pMovieProducerList.get(j);
 
                 if (movieProducerI.getProducer().equals(movieProducerJ.getProducer())) {
@@ -90,10 +91,10 @@ public class ProducerService {
         ProducerPrizesDTO maxProducerPrizesDTO = new ProducerPrizesDTO(null, Integer.MIN_VALUE, null, null);
 
         for (int i = 0; i < pMovieProducerList.size() - 1; i++) {
+            MovieProducer movieProducerI = pMovieProducerList.get(i);
 
             for (int j = i + 1; j < pMovieProducerList.size(); j++) {
 
-                MovieProducer movieProducerI = pMovieProducerList.get(i);
                 MovieProducer movieProducerJ = pMovieProducerList.get(j);
 
                 if (movieProducerI.getProducer().equals(movieProducerJ.getProducer())) {
